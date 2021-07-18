@@ -27,18 +27,14 @@ export default new Vuex.Store({
         },
         delDataToPaymentList(state, payload) {
             console.log('delDataToPaymentList', payload, state.paymentsList)
-            const el =  state.paymentsList.filter(item => item.id == payload)
-            const idx = state.paymentsList.indexOf(el[0])
-            console.log('delDataToPaymentList0', el[0], idx)
+            const idx = state.paymentsList.findIndex(item => item.id == payload)
+           // console.log('delDataToPaymentList0',  idx)
             state.paymentsList.splice(idx, 1)
             console.log('delDataToPaymentList1',  state.paymentsList)
         },
         editDataToPaymentList(state, payload) {
             console.log('editDataToPaymentList', payload, state.paymentsList)
-            const el =  state.paymentsList.filter(item => item.id == payload.id)
-            const idx = state.paymentsList.indexOf(el[0])
-
-            //state.paymentsList = [...payload, ...state.paymentsList]
+            const idx = state.paymentsList.findIndex(item => item.id == payload.id)
             //state.paymentsList[idx] = payload
             Vue.set(state.paymentsList, idx, payload)
             console.log('editDataToPaymentList', idx, state.paymentsList[idx])

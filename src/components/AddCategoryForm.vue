@@ -1,8 +1,8 @@
 <template>
     <div v-if="categoryFormVisible">
         <div class="category-list">
-            <input class="category-list_input" placeholder="Category" type="text" v-model.trim="category" />
-            <button class="category-list_button" @click="onClick"> Save </button>
+            <input class="category-list_input" placeholder="Category" type="text" v-model.trim="category" name="category"/>
+            <button class="category-list_button" @click="onClick($event)"> Save </button>
             <CategoryDisplay  :items="categoryList"/>
         </div>
     </div>

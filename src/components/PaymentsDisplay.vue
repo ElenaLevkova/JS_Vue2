@@ -11,7 +11,7 @@
             </thead>
             <tbody>
                 <tr  v-for="(item, idx) in getPaymentList" 
-                            :key="`${idx}d`"  class="table-items">
+                            :key="`${idx}d`"  class="table-items" name="tablelist">
                     <td  class="table-item">{{item.id}}</td>
                     <td  class="table-item">{{item.date}}</td>
                     <td  class="table-item">{{item.category}}</td>

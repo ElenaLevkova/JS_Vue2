@@ -2,8 +2,8 @@
   <div class="context_menu-id"> 
       <!-- <p>ID = {{id}}</p> -->
       <div class="context_menu">
-        <button  @click="onEdit"> Редактировать </button>
-        <button  @click="onDel"> Удалить </button>
+        <button   @click="onEdit"> Редактировать </button>
+        <button  class="menu_delete" @click="onDel"> Удалить </button>
       </div>
   </div>
 </template>

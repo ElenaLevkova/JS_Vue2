@@ -6,14 +6,14 @@
         </div>
         <template v-if="payFormVisible"> -->
             <div class="payment-form"> 
-                <input class="payment-form__input"  placeholder="Date" type="text" v-model.trim="date" />
+                <input class="payment-form__input"  placeholder="Date" type="text" v-model.trim="date" name="date"/>
                 <!-- <input placeholder="Category" type="text" v-model.trim="category" /> -->
                 <select class="payment-form__input"   v-model="category">
                     <option v-for="(item, idx) in categoryList" :value="item" :key="idx">
                         {{item}}
                     </option>
                 </select>
-                <input class="payment-form__input" placeholder="Amout" type="number" v-model.number="value" />
+                <input class="payment-form__input" placeholder="Amout" type="number" v-model.number="value" name="value"/>
                 <button  @click="onClick"> Save </button>
             </div>
         <!-- </template>
